@@ -5,27 +5,29 @@ import java.util.Scanner;
 
 public class Task_1 {
     public static void main(String[] args) {
-        int[] array = {10, 15, 20, 25, 30};
-        System.out.println("Input your number that you want to delete");
+        int[] array = {10, 15, 20, 20, 30, 10, 15, 30, 20};
+        System.out.println(Arrays.toString(array));
+        System.out.println("Input deleted element of array");
+//        input value which need to delete
         Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
-        boolean valueDel = false; //логический счетчик
+        int delNumb = sc.nextInt();
+//        reading input value
+        int countNumb = 0;
         for (int i : array) {
-            if (i == number) {
-                valueDel = true;
-                System.out.println("this number is exsists");
-                break;
+            if (i == delNumb) {
+                countNumb++;
             }
         }
-        if (valueDel) {
-            int a = 0;
-            for (int i : array) {
-                if (i!=number)
-                    a = i;
+        int finArray = array.length - countNumb;
+        int[] array1 = new int[finArray];
+//        объявляем счетчик
+        int j = 0;
+        for (int i=0;i<array.length;i++) {
+            if (array[i] != delNumb) {
+                array1[j] = array[i];
+                j++;
             }
-            int[] array1 = new int[a];
-
-//            i don't know how to write code
         }
+        System.out.println(Arrays.toString(array1));
     }
 }

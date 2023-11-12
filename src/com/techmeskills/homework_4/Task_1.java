@@ -24,6 +24,7 @@ public class Task_1 {
                     a = i;
             }
             int[] array1 = new int[a];
+
 //            i don't know how to write code
         }
     }

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Task_0 {
     public static void main(String[] args) {
-
         int[] array = {10, 15, 20, 25, 30};
         System.out.println("Input your number of array");
         Scanner sc = new Scanner(System.in);
